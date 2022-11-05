@@ -1,0 +1,106 @@
+{% extends 'pages/dashEMP.html' %}
+{% block content %}
+{%load static%}
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>Materials Stock</title>
+
+<style media="screen">
+  a:link {
+    text-decoration: none;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .row {
+    margin: 100px;
+  }
+     label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    padding-left: 60px;
+    margin-top:15px;
+    font-size: 20px;
+    
+    transition: 0.5s;
+    transition-property: color;
+  }
+  body
+  {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image:url({% static 'images/nnn.jpg' %}) ;
+  }
+
+</style>
+</head>
+<br><br>
+<div class="container">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h6 class="panel-title"   style="color:rgb(255, 255, 255);font-size:18px;font-weight:bold" >Materials Stock</h6>
+  </div>
+  <table class="table table-hover" id="dev-table">
+    <thead>
+      <tr>
+        <th style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Name</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Reference</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Category</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">QTT Stock</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Prix Stock</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">QTT Entree</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Prix Achat</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">QTT Sortie</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Prix Vente</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Fournisseur</th>
+        <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Warehouse</th>
+        
+        
+      </tr>
+    </thead>
+  {%for t in Miss%}
+    <tr>
+      <td>{{t.name}}</td>
+      <td> {{t.reference}}</td>
+      <td> {{t.category}}</td>
+      <td> {{t.QTT_Stock}}</td>
+      <td>{{t.Prix_Stock}}</td>
+      <td>{{t.QTT_Entree}}</td>
+      <td>{{t.Prix_Achat}}</td>
+      <td>{{t.QTT_Sortie}}</td>
+      <td>{{t.Prix_Vente}}</td>
+      <td>{{t.Fournisseur}}</td>
+      <td>{{t.Warehouse}}</td>
+    
+    </tr>
+  {%endfor%}
+  </table>
+</div>
+</div>
+<br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+{% endblock content %}
+

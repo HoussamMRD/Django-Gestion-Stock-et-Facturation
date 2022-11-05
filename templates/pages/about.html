@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <title>About US</title>
+  <body>
+          <p class="masthead-intro" style="color:rgb(255, 255, 255)"></p> 
+          <h1 class="masthead-heading" style="color:rgb(228, 213, 13);font-size:90px;font-weight:bold;text-shadow:3px 3px 3px rgb(0, 0, 0)" >FIFTY NINE MAROC</h1>
+      </header>
+    
+  <!-- ***** About me ***** -->
+  
+  <section class="introduction">
+    <div class="starcontainer">
+      <h2 style="color:rgb(255, 255, 255);font-size:50px;font-weight:bold;text-shadow:3px 3px 3px rgb(0, 0, 0)">About Company</h2>
+      <i class="fa fa-star fa-2x"></i>
+      <hr class="star"></hr>
+    </div>
+      <p style="color:rgb(255, 255, 255); font-size:16px;font-weight:bold;text-shadow:3px 3px 3px rgb(0, 0, 0)">FIFTY NINE been established in 1988 in middle east, and opened its new branch in morocco in 2007. Its specialised in private sector General contracting with capital of 25,000,000 Mdh Over the years, the company has undertaken many challenging projects, accumulated skills, and experiences in various fields, in both middle east and Morocco.Nowadays, the company is a leading contracting company. Since its establishment, it has executed projects in Palestine and Morocco. As a result Through a continuous improvement of the management system, as well as to regularly assess the mechanism of the work to achieve and respect the client requirements. </p>
+  
+      <p style="color:rgb(255, 255, 255);font-size:50px;font-weight:bold;text-shadow:3px 3px 3px rgb(0, 0, 0)"> </p>
+  </section>
+  
+
+<style>
+  
+body {
+  width: auto;
+  height: 100vh;
+  
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({% static 'images/ccc.jpg' %}) ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: opacity(80%);
+    
+}
+
+.introduction > p, 
+.location > p,
+.content-footer > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.questions > h2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* -------------------------
+      Link Styles
+   -------------------------*/
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  /*color: #a1a1a1;*/
+  color: #f1da09;
+}
+
+a:visited {
+  color: #f1da09;
+}
+
+/* -------------------------
+      Global Styles
+   -------------------------*/
+
+.starcontainer h2 {
+  font-size: 2.8em;
+  margin-bottom: 0.2em;
+}
+
+.starcontainerportfolio > h2 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-bottom: 0.2em;
+}
+
+.fa-star {
+  margin-bottom: 0 auto;
+}
+
+hr {
+  border: 2px solid #f1da09;
+  width: 15.7em;
+  margin-top: -1em;
+  margin-bottom: 2em; 
+  background-color: #f1da09;
+}
+
+hr, .fa-star {
+  background-color: #f1da09;
+  padding: 0 .25em
+}
+
+.starcontainer .fa {
+  color:#f1da09;
+}
+
+.starcontainerportfolio .fa {
+  color:#f1da09;
+  display: inline-block;
+}
+
+/* -------------------------
+      Layout Declarations
+   -------------------------*/
+
+.masthead-heading, 
+.masthead-intro,
+.content-footer,
+.starcontainer,
+.starcontainerportfolio {
+  text-align: center;
+  text-decoration-color: #ffffff;
+}
+
+.masthead {
+  background-image: url("https://unsplash.imgix.net/5/night-city.jpg?q=75&fm=jpg&s=17d530aa2cd2080b1aba21843cc5f433");
+  background-repeat: no-repeat;
+  border-top: solid 1em #ffffff;
+  border-bottom: solid 1em #ffffff;
+  background-size: cover;
+  padding: 6em 0;
+}
+
+.masthead > img {
+  max-height: 6em;
+  border-radius: 150%;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #cde211;
+}
+
+.masthead-intro {
+  margin-bottom: 0.1em;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+}
+
+.masthead-heading {
+  margin-top: -0.2em;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  font-size: 6em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.content-footer,
+.introduction, 
+.location, 
+.questions {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.questions {
+  padding-bottom: 1.5em;
+}
+
+/* -------------------------
+    Portfolio
+   -------------------------*/
+
+li {
+    list-style: none;
+   }
+
+#container {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+    
+}
+.box {
+  float:left;
+  width:31%;
+  margin:1% 1% 93px 1%;
+}
+
+.box img {
+  width: 100%;
+  display: block;
+  border-style: solid;
+  border-width:1.5px;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  border-style: none;
+  border-radius: 0.3em;
+  font-size: 1em;
+  text-shadow: none;
+  height: 3.3em;
+  width: 9.6em;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+
+
+
+</style>
+  
+
+  </html>
+<br><br>
+
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <style>
+    .footer-basic {
+    padding: 40px 0;
+    
+    color:#eeb90d;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size: 18px;
+    line-height:0.9;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:28px;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:2px solid rgb(255, 255, 255);
+    margin:0 15px;
+    color:inherit;
+    opacity: 0.9;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity: 2;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:20px;
+    text-align:center;
+    font-size:18px;
+    color:rgb(255, 254, 254);
+    margin-bottom:0;
+  }
+  
+  </style>
+  <body>
+      <div class="footer-basic">
+          <footer>
+              <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="/">Home</a></li>
+                  <li class="list-inline-item"><a href="contact">ContactUs</a></li>
+                  <li class="list-inline-item"><a href="about">About</a></li>
+                  <li class="list-inline-item"><a href="#">Terms</a></li>
+                  <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              </ul>
+              <p class="copyright">FIFTY NINE iSTOCK © 2022 - All rights reserved </p>
+          </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+  
+  </html>

@@ -1,0 +1,86 @@
+{% extends 'pages/dashEMP.html' %}
+{% block content %}
+{%load static%}
+
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <title>Facturation</title>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+       label #sidebar_btn {
+      z-index: 1;
+      color: #fff;
+      position: fixed;
+      cursor: pointer;
+      left: 300px;
+      padding-left: 60px;
+      margin-top:15px;
+      font-size: 20px;
+      
+      transition: 0.5s;
+      transition-property: color;
+    }
+    body
+    
+      {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image:url({% static 'images/nnn.jpg' %}) ;
+  }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title"   style="color:rgb(255, 255, 255);font-size:18px;font-weight:bold" >Liste Facture </h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold"> client</th>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold"> Produit</th>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">QTT</th>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold">Prix</th>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold"> Mode Paiement</th>
+          <th  style="color:rgb(0, 0, 0);font-size:18px;font-weight:bold"> Etat</th>
+          
+          <th> </th>
+          
+        </tr>
+      </thead>
+    {%for t in faq%}
+      <tr>
+        <td> {{t.client}}</td>
+        <td> {{t.Produit}}</td>
+        <td> {{t.QTT}}</td>
+        <td> {{t.Prix}}</td>
+        <td> {{t.Mode_Paiement}}</td>
+        <td> {{t.Etat}}</td>
+        <td><a class="btn btn-danger btn-xs" href="fct.html">Facture</a></td>
+      </tr>
+    {%endfor%}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+		
+		
+{% endblock content %}

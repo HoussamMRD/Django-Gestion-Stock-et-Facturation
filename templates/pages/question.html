@@ -1,0 +1,83 @@
+{% extends 'pages/dashEMP.html' %}
+{% block content %}
+{%load static%}
+<title>ASK Question</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+<style>
+body   {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image:url({% static 'images/nnn.jpg' %}) ;
+  }
+a:link {
+        text-decoration: none;
+      }
+       label #sidebar_btn {
+      z-index: 1;
+      color: #fff;
+      position: fixed;
+      cursor: pointer;
+      left: 300px;
+      padding-left: 60px;
+      margin-top:15px;
+      font-size: 20px;
+      
+      transition: 0.5s;
+      transition-property: color;
+    }
+    textarea {
+  height: 300px;
+  line-height: 150%;
+  width: 100%;
+  
+  resize: none;
+}
+
+
+  </style>
+</head>
+<h2 style="text-align:center; color:rgb(206, 193, 17);font-size:40px;font-weight:bold;text-shadow:3px 3px 3px rgb(0, 0, 0)">ASK QUESTION</h2>
+<form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+    <label for="course_name"    style=color:0 ></label>
+    <textarea name="text" class="feedback-input" placeholder="Statement of the Problem"   style=text-align:center ></textarea>
+    
+
+
+    </div>
+    
+    
+
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+{% endblock content %}
